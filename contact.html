@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Mr B Academic Mentoring</title>
+  <meta name="description" content="Get in touch with Matt Boulton to discuss academic mentoring, 11+ preparation, home education or additional learning support.">
+  <meta name="theme-color" content="#0c1620">
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="light-header">
+
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<header class="site-header" data-header>
+  <div class="header-inner">
+    <a href="index.html" class="logo-link">
+      <img src="assets/logo.png" alt="Mr B Academic Mentoring" class="site-logo" width="520" height="520">
+    </a>
+
+    <nav class="nav" id="primary-nav" aria-label="Main">
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="contact.html" class="nav-link" aria-current="page">Contact</a></li>
+        <li><a href="#enquiry-form" class="nav-cta">Free session</a></li>
+      </ul>
+    </nav>
+
+    <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+  </div>
+</header>
+
+<main id="main-content">
+
+  <!-- Hero + form -->
+  <section class="section cream contact-hero" id="hero">
+    <div class="container split media-right wide-content">
+      <div class="split-content">
+        <span class="kicker">Get in touch</span>
+        <h1>Let&rsquo;s talk about your child.</h1>
+        <p>Whether you&rsquo;re after academic mentoring, 11+ preparation, home education support or a bit more confidence, the first step is simply a conversation. Matt will listen, answer your questions and be honest about whether he&rsquo;s the right fit.</p>
+
+        <dl class="contact-direct">
+          <div>
+            <dt>Email</dt>
+            <dd><a href="mailto:matthewboulton06@hotmail.com">matthewboulton06@hotmail.com</a></dd>
+          </div>
+          <div>
+            <dt>Telephone</dt>
+            <dd><a href="tel:+447896903797">+44 7896 903797</a></dd>
+          </div>
+          <div>
+            <dt>Social</dt>
+            <dd class="contact-social">
+              <a href="https://www.instagram.com/mattyb44823?stkn=MWNkcTJmdXpudGJmNw==" target="_blank" rel="noopener noreferrer">Instagram</a>
+              <a href="https://www.linkedin.com/in/matthew-boulton-7b339640?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_ios" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="form-card" id="enquiry-form">
+        <h2>Send Matt a message</h2>
+        <p class="form-intro">He usually replies within 24 hours.</p>
+
+        <form id="contact-form" novalidate>
+          <fieldset class="field-group">
+            <legend>About you</legend>
+            <div class="field-row">
+              <div class="field">
+                <label for="contact-name">Your name</label>
+                <input type="text" id="contact-name" name="name" autocomplete="name" required>
+              </div>
+              <div class="field">
+                <label for="contact-email">Email</label>
+                <input type="email" id="contact-email" name="email" autocomplete="email" required>
+              </div>
+              <div class="field full">
+                <label for="contact-telephone">Telephone <span class="optional">(optional)</span></label>
+                <input type="tel" id="contact-telephone" name="telephone" autocomplete="tel">
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="field-group">
+            <legend>About your child</legend>
+            <div class="field-row">
+              <div class="field">
+                <label for="contact-year">Year group</label>
+                <select id="contact-year" name="year_group" required>
+                  <option value="" disabled selected>Select year</option>
+                  <option>Year 3</option>
+                  <option>Year 4</option>
+                  <option>Year 5</option>
+                  <option>Year 6 (11+ prep)</option>
+                  <option>Year 7+</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="contact-support">Support you&rsquo;re after</label>
+                <select id="contact-support" name="support" required>
+                  <option value="" disabled selected>Select an option</option>
+                  <option>Academic mentoring</option>
+                  <option>11+ &amp; entrance preparation</option>
+                  <option>Confidence &amp; additional needs</option>
+                  <option>Home education</option>
+                  <option>Not sure yet</option>
+                </select>
+              </div>
+              <div class="field full">
+                <label for="contact-message">How can Matt help?</label>
+                <textarea id="contact-message" name="message" rows="5" required></textarea>
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="form-actions">
+            <button type="submit" class="btn">Send enquiry <span class="btn-arrow" aria-hidden="true">&rarr;</span></button>
+            <p class="form-note">No pressure &mdash; just an initial conversation.</p>
+          </div>
+
+          <p class="form-status" id="contact-form-status" role="status" aria-live="polite" hidden></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- What happens next -->
+  <section class="section white">
+    <div class="container split" data-reveal>
+      <figure class="split-media portrait">
+        <img src="assets/matt-headshot.jpg" alt="Matt Boulton" loading="lazy">
+        <figcaption class="media-plate">
+          <strong>Matt Boulton</strong>
+          <span>Director of Studies &middot; Mr B Academic Mentoring</span>
+        </figcaption>
+      </figure>
+
+      <div class="split-content">
+        <span class="kicker">What happens next</span>
+        <h2>Three short steps, and no commitment.</h2>
+        <p>Enquiries come straight to Matt &mdash; not an agency or a booking system.</p>
+
+        <div class="steps split-steps">
+          <article class="step">
+            <h3>Matt replies personally</h3>
+            <p>Usually within 24 hours, by email or phone &mdash; whichever you prefer.</p>
+          </article>
+          <article class="step">
+            <h3>A conversation about your child</h3>
+            <p>What they find hard, what they enjoy and what you&rsquo;re hoping support will achieve.</p>
+          </article>
+          <article class="step">
+            <h3>A free first session</h3>
+            <p>Your child meets Matt and you both see how it works, before deciding anything.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reassurance -->
+  <section class="section navy enquiry">
+    <span class="shape" aria-hidden="true"></span>
+    <div class="container enquiry-inner">
+      <span class="rule" aria-hidden="true"></span>
+      <h2>Not sure what support your child needs?</h2>
+      <p>That&rsquo;s completely fine, and it&rsquo;s where most families start. Tell Matt a little about your situation and he&rsquo;ll talk the options through with you.</p>
+      <a href="mailto:matthewboulton06@hotmail.com" class="btn">Email Matt directly <span class="btn-arrow" aria-hidden="true">&rarr;</span></a>
+      <div class="enquiry-direct">
+        <a href="tel:+447896903797">Or call +44 7896 903797</a>
+        <a href="services.html">See what Matt offers</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-main">
+    <div class="footer-brand">
+      <a href="index.html" class="footer-brand-name">Matt Boulton</a>
+      <span class="footer-brand-business">Mr B Academic Mentoring</span>
+      <p>Personalised academic mentoring, 11+ preparation and educational support tailored to each child.</p>
+    </div>
+
+    <nav class="footer-nav" aria-label="Explore">
+      <h2 class="footer-heading">Explore</h2>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <nav class="footer-nav" aria-label="Services">
+      <h2 class="footer-heading">Services</h2>
+      <ul class="footer-links">
+        <li><a href="services.html#mentoring">Academic mentoring</a></li>
+        <li><a href="services.html#entrance">11+ &amp; entrance preparation</a></li>
+        <li><a href="services.html#confidence">Confidence &amp; additional needs</a></li>
+        <li><a href="services.html#home-education">Home education</a></li>
+      </ul>
+    </nav>
+
+    <div class="footer-contact">
+      <h2 class="footer-heading">Contact</h2>
+      <address>
+        <span>Email</span>
+        <a href="mailto:matthewboulton06@hotmail.com">matthewboulton06@hotmail.com</a>
+        <span>Telephone</span>
+        <a href="tel:+447896903797">+44 7896 903797</a>
+      </address>
+      <div class="footer-social">
+          <a href="https://www.instagram.com/mattyb44823?stkn=MWNkcTJmdXpudGJmNw==" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://www.linkedin.com/in/matthew-boulton-7b339640?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_ios" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>&copy; 2026 Matt Boulton. All rights reserved.</p>
+    <p>Created by <a href="https://lawsondesigns.net/" target="_blank" rel="noopener noreferrer">Lawson Designs</a></p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
