@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* -------------------------------------------------------------
-     Scroll reveal — one quiet rise per element
+    Scroll reveal - one quiet rise per element
   ------------------------------------------------------------- */
   const revealEls = document.querySelectorAll('[data-reveal]');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const show = (html) => { contactStatus.innerHTML = html; contactStatus.hidden = false; };
 
       if (!FORM_ENDPOINT) {
-        show(`Thanks &mdash; the online form isn&rsquo;t connected yet. Please send this to <a href="mailto:${EMAIL}">${EMAIL}</a> and Matt will reply within 24 hours.`);
+        show(`Thanks - the online form isn&rsquo;t connected yet. Please send this to <a href="mailto:${EMAIL}">${EMAIL}</a> and Matt will reply within 24 hours.`);
         return;
       }
 
@@ -171,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
       try {
         await postForm(contactForm);
         contactForm.reset();
-        show('Thanks &mdash; your enquiry is on its way. Matt will reply within 24 hours.');
+        show('Thanks - your enquiry is on its way. Matt will reply within 24 hours.');
       } catch (err) {
         show(`That didn&rsquo;t send. Please try again, or email <a href="mailto:${EMAIL}">${EMAIL}</a>.`);
       } finally {
@@ -340,7 +340,7 @@ document.addEventListener('DOMContentLoaded', () => {
       await postForm(leadForm);
       showSuccess();
     } catch (err) {
-      if (button) { button.disabled = false; button.textContent = 'Claim my free session'; }
+      if (button) { button.disabled = false; button.textContent = 'Claim my free consultation'; }
       const note = leadForm.querySelector('.lead-microcopy');
       if (note) note.innerHTML = `That didn&rsquo;t send. Please email <a href="mailto:${EMAIL}">${EMAIL}</a>.`;
     }
