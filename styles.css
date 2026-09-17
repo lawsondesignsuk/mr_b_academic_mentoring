@@ -1,23 +1,3 @@
-/* ===============================================================
-   Mr B Academic Mentoring
-   -----------------------------------------------------------------
-   Structure
-   01  Tokens
-   02  Base
-   03  Layout utilities  (.section / .container / .section-head)
-   04  Header + navigation
-   05  Buttons + links
-   06  Shared components  (split / cards / steps / checklist / quote)
-   07  Home page sections
-   08  Services page sections
-   09  Contact page sections
-   10  Footer
-   11  Lead-capture popup
-   =============================================================== */
-
-/* ---------------------------------------------------------------
-   01  Tokens
---------------------------------------------------------------- */
 :root {
   /* Brand colours, taken from the logo and photography */
   --navy: #16213e;
@@ -45,13 +25,9 @@
   --border: #e3ddce;
   --border-dark: rgba(236, 229, 215, 0.22);
 
-  /* Typography — a refined serif for headings, a quiet sans for text.
-     System fallbacks mean the site still reads correctly if the
-     webfonts are blocked or slow. */
   --font-heading: "Source Serif 4", Georgia, "Times New Roman", serif;
   --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 
-  /* Fluid type scale — one scale used by every page */
   --fs-xs:   0.78rem;
   --fs-sm:   0.9rem;
   --fs-base: 1rem;
@@ -61,7 +37,6 @@
   --fs-2xl:  clamp(1.9rem, 1.6rem + 1.35vw, 2.65rem);
   --fs-3xl:  clamp(2.3rem, 1.75rem + 2.4vw, 3.5rem);
 
-  /* Spacing scale */
   --space-1: 0.25rem;
   --space-2: 0.5rem;
   --space-3: 1rem;
@@ -70,7 +45,6 @@
   --space-6: 3rem;
   --space-7: 4rem;
 
-  /* Rhythm — every section on every page breathes the same way */
   --section-y: clamp(4rem, 8vw, 6.5rem);
   --section-x: clamp(1.25rem, 5vw, 3rem);
   --gap-split: clamp(2.5rem, 6vw, 5.5rem);
@@ -146,7 +120,7 @@ img { max-width: 100%; display: block; }
 }
 .skip-link:focus { transform: translate(-50%, 0); }
 
-/* Scroll reveal — a single quiet rise, never a cascade */
+/* Scroll reveal - a single quiet rise, never a cascade */
 [data-reveal] {
   opacity: 0;
   transform: translateY(18px);
@@ -164,11 +138,6 @@ img { max-width: 100%; display: block; }
   }
 }
 
-/* ---------------------------------------------------------------
-   03  Layout utilities
-   One .section class owns vertical rhythm site-wide, so no page
-   can drift out of step with another.
---------------------------------------------------------------- */
 .container {
   width: 100%;
   max-width: var(--container);
@@ -193,7 +162,7 @@ img { max-width: 100%; display: block; }
 .section.cream + .section.cream,
 .section.white + .section.white { border-top: 1px solid var(--border); }
 
-/* Section heading device — rule, heading, standfirst */
+/* Section heading device - rule, heading, standfirst */
 .section-head {
   max-width: 62ch;
   margin: 0 0 var(--head-gap);
@@ -218,7 +187,7 @@ img { max-width: 100%; display: block; }
 .section-head.centered p { margin-inline: auto; }
 .section.navy .section-head p { color: var(--text-on-dark-muted); }
 
-/* Kicker — one definition, used sparingly for wayfinding only */
+/* Kicker - one definition, used sparingly for wayfinding only */
 .kicker {
   display: block;
   margin-bottom: var(--space-3);
@@ -482,7 +451,7 @@ section[id] { scroll-margin-top: 5rem; }
 .split-media.portrait { aspect-ratio: 4 / 5; }
 .split-media img { width: 100%; height: 100%; object-fit: cover; }
 
-/* A small caption plate anchored to the image — the one place the
+/* A small caption plate anchored to the image - the one place the
    photography and the type meet. */
 .media-plate {
   position: absolute;
