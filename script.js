@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
      rather than silently doing nothing.
   ------------------------------------------------------------- */
   const FORM_ENDPOINT = ''; // e.g. 'https://formspree.io/f/yourFormId'
-  const EMAIL = 'matthewboulton06@hotmail.com';
+  const EMAIL = 'matt@mrbmentoring.co.uk';
 
   const postForm = async (form) => {
     const res = await fetch(FORM_ENDPOINT, {
@@ -340,7 +340,7 @@ document.addEventListener('DOMContentLoaded', () => {
       await postForm(leadForm);
       showSuccess();
     } catch (err) {
-      if (button) { button.disabled = false; button.textContent = 'Claim my free consultation'; }
+      if (button) { button.disabled = false; button.textContent = 'Enquire about my free consultation'; }
       const note = leadForm.querySelector('.lead-microcopy');
       if (note) note.innerHTML = `That didn&rsquo;t send. Please email <a href="mailto:${EMAIL}">${EMAIL}</a>.`;
     }
