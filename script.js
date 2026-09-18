@@ -126,15 +126,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* -------------------------------------------------------------
-     Enquiry form (contact page)
+    /* -------------------------------------------------------------
+      Enquiry forms
 
-     Point FORM_ENDPOINT at a form backend (Formspree, Getform,
-     Netlify Forms, etc.) to start receiving enquiries by email.
-     Until then the form tells the visitor to email Matt instead,
-     rather than silently doing nothing.
-  ------------------------------------------------------------- */
-  const FORM_ENDPOINT = ''; // e.g. 'https://formspree.io/f/yourFormId'
+      This static site creates a complete email draft when no form
+      service is configured. Add a backend endpoint to send directly.
+    ------------------------------------------------------------- */
+    const FORM_ENDPOINT = ''; // e.g. 'https://formspree.io/f/yourFormId'
   const EMAIL = 'matt@mrbmentoring.co.uk';
 
   const postForm = async (form) => {
@@ -144,6 +142,15 @@ document.addEventListener('DOMContentLoaded', () => {
       headers: { Accept: 'application/json' },
     });
     if (!res.ok) throw new Error('Request failed');
+  };
+
+  const openEmailDraft = (form, subject) => {
+    const fields = Array.from(new FormData(form), ([name, value]) => {
+      const label = name.replace(/_/g, ' ').replace(/\b\w/g, (letter) => letter.toUpperCase());
+      return `${label}: ${value}`;
+    });
+    const body = [`New enquiry from the Mr B Academic Mentoring website`, '', ...fields].join('\n');
+    window.location.href = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
 
   const contactForm = document.getElementById('contact-form');
@@ -162,7 +169,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const show = (html) => { contactStatus.innerHTML = html; contactStatus.hidden = false; };
 
       if (!FORM_ENDPOINT) {
-        show(`Thanks - the online form isn&rsquo;t connected yet. Please send this to <a href="mailto:${EMAIL}">${EMAIL}</a> and Matt will reply within 24 hours.`);
+        openEmailDraft(contactForm, 'Website enquiry');
+        show(`Your email app should now have opened with your enquiry. Please send it to <a href="mailto:${EMAIL}">${EMAIL}</a> and Matt will reply within 24 hours.`);
         return;
       }
 
@@ -330,7 +338,9 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     if (!FORM_ENDPOINT) {
-      showSuccess();
+      openEmailDraft(leadForm, 'Free consultation enquiry');
+      const note = leadForm.querySelector('.lead-microcopy');
+      if (note) note.innerHTML = `Your email app should now have opened. Please send the prepared message to <a href="mailto:${EMAIL}">${EMAIL}</a>.`;
       return;
     }
 
