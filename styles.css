@@ -643,7 +643,7 @@ section[id] { scroll-margin-top: 5rem; }
   .facts li { padding: var(--space-3) 0; border-left: none; border-top: 1px solid var(--border); }
   .facts li:first-child { border-top: none; padding-top: 0; }
   .section.navy .facts li { border-top-color: var(--border-dark); border-left: none; }
-  .section-cta { justify-content: flex-start; margin-top: var(--space-6); }
+  .section-cta { margin-top: var(--space-6); }
 }
 
 /* ---------------------------------------------------------------
@@ -655,7 +655,6 @@ section[id] { scroll-margin-top: 5rem; }
   display: flex;
   align-items: center;
   padding: 9rem var(--section-x) 8rem;
-  overflow: hidden;
 }
 .hero::after {
   content: "";
