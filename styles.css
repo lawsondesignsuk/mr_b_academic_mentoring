@@ -663,7 +663,7 @@ section[id] { scroll-margin-top: 5rem; }
   z-index: -2;
   background-image:
     linear-gradient(180deg, rgba(8, 16, 26, 0.84) 0%, rgba(22, 33, 62, 0.64) 45%, rgba(12, 22, 32, 0.92) 100%),
-    url(assets/Mr_B_Academic_Mentoring_hero.PNG);
+    url(assets/academic-mentoring-tutor-hero.webp);
   background-size: cover;
   background-position: center 20%;
 }
@@ -1223,7 +1223,7 @@ section[id] { scroll-margin-top: 5rem; }
   color: var(--white);
   background-image:
     linear-gradient(180deg, rgba(8, 16, 26, 0.3) 0%, rgba(8, 16, 26, 0.9) 100%),
-    url("assets/11+-exam.jpg");
+    url("assets/11-plus-entrance-exam-practice.webp");
   background-size: cover;
   background-position: center;
 }
