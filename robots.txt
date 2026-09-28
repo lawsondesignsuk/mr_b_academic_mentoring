@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mrbmentoring.co.uk/sitemap.xml
+Sitemap: https://mattboultonmentoring.co.uk/sitemap.xml

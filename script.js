@@ -1,5 +1,5 @@
 /* ===============================================================
-   Mr B Academic Mentoring
+  Matt Boulton Mentoring
    =============================================================== */
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
       service is configured. Add a backend endpoint to send directly.
     ------------------------------------------------------------- */
     const FORM_ENDPOINT = ''; // e.g. 'https://formspree.io/f/yourFormId'
-  const EMAIL = 'matt@mrbmentoring.co.uk';
+  const EMAIL = 'matt@mattboultonmentoring.co.uk';
 
   const postForm = async (form) => {
     const res = await fetch(FORM_ENDPOINT, {
@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const label = name.replace(/_/g, ' ').replace(/\b\w/g, (letter) => letter.toUpperCase());
       return `${label}: ${value}`;
     });
-    const body = [`New enquiry from the Mr B Academic Mentoring website`, '', ...fields].join('\n');
+    const body = [`New enquiry from the Matt Boulton Mentoring website`, '', ...fields].join('\n');
     window.location.href = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
 
@@ -206,8 +206,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const leadSuccess = document.getElementById('lead-success');
   const openTriggers = document.querySelectorAll('[data-lead-open]');
 
-  const SEEN_KEY = 'mrb_lead_last_seen';
-  const DONE_KEY = 'mrb_lead_submitted';
+  const SEEN_KEY = 'mbm_lead_last_seen';
+  const DONE_KEY = 'mbm_lead_submitted';
   const QUIET_FOR = 1000 * 60 * 60 * 24 * 7; // don't prompt again for a week
 
   const store = {
