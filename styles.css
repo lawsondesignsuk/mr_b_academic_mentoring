@@ -1266,7 +1266,8 @@ section[id] { scroll-margin-top: 5rem; }
 .lead-field { display: grid; gap: 0.2rem; }
 .lead-field label { font-size: var(--fs-xs); font-weight: 600; color: var(--navy); }
 .lead-field input,
-.lead-field select {
+.lead-field select,
+.lead-field textarea {
   width: 100%;
   padding: clamp(0.5rem, 1.35vh, 0.7rem) 0.75rem;
   font: inherit;
@@ -1277,8 +1278,10 @@ section[id] { scroll-margin-top: 5rem; }
   border-radius: var(--radius-sm);
   transition: border-color var(--t-base), box-shadow var(--t-base);
 }
+.lead-field textarea { min-height: 4.5rem; resize: vertical; }
 .lead-field input:focus,
-.lead-field select:focus {
+.lead-field select:focus,
+.lead-field textarea:focus {
   outline: none;
   border-color: var(--gold);
   box-shadow: 0 0 0 3px rgba(var(--gold-rgb), 0.18);

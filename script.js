@@ -1,5 +1,5 @@
 /* ===============================================================
-  Matthew Boulton - Academic Mentoring
+  Matt Boulton Academic Mentoring
    =============================================================== */
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const label = name.replace(/_/g, ' ').replace(/\b\w/g, (letter) => letter.toUpperCase());
       return `${label}: ${value}`;
     });
-    const body = [`New enquiry from the Matthew Boulton - Academic Mentoring website`, '', ...fields].join('\n');
+    const body = [`New enquiry from the Matt Boulton Academic Mentoring website`, '', ...fields].join('\n');
     window.location.href = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
 
